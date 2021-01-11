@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Enter Number 1 : </label><textarea id="text1" placeholder="Number 1"></textarea><br>
+    <label>Enter Number 2 : </label><textarea id="text2" placeholder="Number 2"></textarea><br>
+    <label>ADD RESULT     : </label><textarea id="txtresult" placeholder="Result"></textarea><br>
+    <button onclick="add()">ADD</button>
+    <script>
+        function add() {
+            var first_number = parseInt(document.getElementById("text1").value);
+            var second_number = parseInt(document.getElementById("text2").value);
+            var result = first_number + second_number;
+            document.getElementById("txtresult").value = result;
+        }
+    </script>
+</body>
+</html>

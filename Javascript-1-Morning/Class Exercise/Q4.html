@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea id="inputString" placeholder="Enter a String..."></textarea><br>
+    <button onclick="swap()">Swap</button><br>
+    <textarea id="outputString"></textarea>
+    <script>
+        function swap(){
+            var str = document.getElementById("inputString").value;
+            let result = '';
+            for(let i=0; i<str.length; i++){
+                if(str[i] == str[i].toUpperCase()){
+                    result = result + str[i].toLowerCase();
+                }
+                else{
+                    result = result + str[i].toUpperCase();
+                }
+            }
+            document.getElementById("outputString").value = result;
+        }
+    </script>
+</body>
+</html>
