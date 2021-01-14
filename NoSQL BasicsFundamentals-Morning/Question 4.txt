@@ -1,0 +1,9 @@
+There are mainly 2 types of Indexes that CouchBase uses:
+1. Primary Indexing
+2. Secondary Indexing
+
+1. Primary Indexing :	We can create primary indexing in Couchbase is : CREATE PRIMARY INDEX 'index_name' ON 'bucket_name';			
+2. Secondary Indexing : We can create secondary indexing in Couchbase is : CREATE INDEX 'index_name' ON 'bucket_name' WHERE type='name';
+
+To Drop the primary index - DROP PRIMARY INDEX ON couchbasedemo;
+To Create the secondary index - CREATE INDEX secondary_index ON couchbasedemo(name) USING GSI;
