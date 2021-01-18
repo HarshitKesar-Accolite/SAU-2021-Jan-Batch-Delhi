@@ -1,0 +1,91 @@
+@media (min-width: 700px) {
+  .container-1 {
+    border: 1px white solid;
+    display: flex;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 700px) {
+  .hl-1 {
+    display: none !important;
+  }
+}
+h1 {
+  color: white;
+  text-align: center;
+  font-family: "Rancho", cursive !important;
+  letter-spacing: 0.6rem;
+}
+h2 {
+  text-align: center;
+  color: white;
+  font-family: "Caveat Brush", cursive;
+  letter-spacing: 0.5rem;
+}
+.box-1 {
+  flex: 1;
+  padding: 6px;
+}
+.box-2 {
+  flex: 1;
+  padding: 6px;
+}
+.box-3 {
+  flex: 1;
+  padding: 6px;
+}
+p {
+  color: white;
+  font-family: "Brush Script MT", cursive;
+  text-align: justify;
+  text-justify: inter-word;
+  font-family: "Satisfy", cursive;
+  font-size: 24px;
+}
+.time-border {
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #f1cd8f;
+  margin: 5px auto;
+}
+.love-border {
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #f1cd8f;
+  margin: 5px auto;
+}
+.health-border {
+  display: block;
+  width: 140px;
+  height: 3px;
+  background: #f1cd8f;
+  margin: 5px auto;
+}
+.conclusion-border {
+  display: block;
+  width: 260px;
+  height: 3px;
+  background: #f1cd8f;
+  margin: 5px auto;
+}
+body {
+  background-color: rgba(0, 0, 0, 0.904);
+}
+img {
+  width: 100%;
+  height: 300px;
+  max-width: 100%;
+}
+.hl-1 {
+  display: block;
+  width: 1px;
+  height: 1500px;
+  background: #f1cd8f;
+  margin: 5px auto;
+}
+.quote {
+  font-size: 12px;
+  font-family: "Gloria Hallelujah", cursive;
+}
