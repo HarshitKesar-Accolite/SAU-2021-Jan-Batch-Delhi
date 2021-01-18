@@ -1,0 +1,33 @@
+<div class="card d-flex flex-col align-items-center p-4">
+  <div *ngIf='!editUserFG.valid'>
+    <h3 class="text-danger">
+      PLEASE ENTER THE VALID DETAILS
+    </h3>
+    <pre>
+      > Name should be min 3 letters and max 20 letters.
+      > ID should be in between 100 to 200.
+      > Age must be min 18 and max 100.
+      > Enter your Date of Birth.
+    </pre>
+  </div>
+
+  <div *ngIf='editUserFG.valid'>
+    <h3 class="text-success">
+      VALID: HURRAY YOU ARE ALL SET TO GO !!!
+    </h3>
+  </div>
+
+  <form [formGroup] = "editUserFG" (ngSubmit)="updateUser()">
+    <input type="text" formControlName="name" placeholder="Name" class="form-control m-1">
+    <input type="number" formControlName="id" placeholder="ID" class="form-control m-1">
+    <input type="number" formControlName="age" placeholder="Age" class="form-control m-1">
+    <input type="date" formControlName="dob" placeholder="Date of Birth" class="form-control m-1">
+    <div class="d-flex justify-content-center">
+      <button type="submit" [disabled]="editUserFG.invalid" class="btn btn-warning text-white">
+        Update
+      </button>
+    </div>
+  </form>
+</div>
+
+

@@ -1,0 +1,17 @@
+<div class="card d-flex w-100 justify-content-between flex-row px-4 py-4 shadow my-4">
+      <div>
+        <h3 class="text-dark">
+          {{user.name}}
+        </h3>
+      </div>
+      <span>
+        <button (click)="editUser()" class="text-white btn btn-warning mr-2" >
+          Edit
+        </button>
+        <button (click)="deleteUser()" class="btn btn-danger">
+          Delete
+        </button>
+      </span>
+</div>
+  <app-edit-user *ngIf="editDetails" [userDetail]=user (updated)="updatedSucessfully($event)">
+  </app-edit-user>

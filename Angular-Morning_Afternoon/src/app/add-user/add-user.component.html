@@ -1,0 +1,49 @@
+<div class="content">
+  <h1 class="text-primary">
+    Add User Details
+  </h1>
+</div>
+
+<div class="content">
+  <div *ngIf='!addUserFG.valid' class="text-danger">
+    <h3 class="content">
+      Please Enter the Valid Details
+    </h3>
+    <pre>
+      > Name should be min 3 letters and max 20 letters.
+      > ID should be in between 100 to 200.
+      > Age must be min 18 and max 100.
+      > Enter your Date of Birth.
+    </pre>
+  </div>
+
+  <div *ngIf='addUserFG.valid'>
+    <h3  class="text-success">
+      VALID: HURRAY YOU ARE ALL SET TO GO !!!
+    </h3>
+  </div>
+
+  <form [formGroup] = "addUserFG">
+    <input type="text" formControlName="name" placeholder="Name" class="form-control m-1">
+    <input type="number" formControlName="id" placeholder="ID" class="form-control m-1">
+    <input type="number" formControlName="age" placeholder="Age" class="form-control m-1">
+    <input type="date" formControlName="dob" placeholder="Date of Birth" class="form-control m-1">
+    <div class="d-flex justify-content-center">
+      <button (click)="onSubmit()" [disabled]="addUserFG.invalid" class="btn btn-warning text-white">
+        Submit
+      </button>
+    </div>
+  </form>
+
+  <div *ngIf='isSuccessful' class="text-success">
+    <h3>
+      Details Added Successfully !!!
+    </h3>
+    <h3>
+      Thankyou for registering !!!
+    </h3>
+  </div>
+</div>
+
+<!-- <pre>{{addUserFG.value | json}}</pre>
+<pre>{{addUserFG.get('name').value | json}}</pre> -->
