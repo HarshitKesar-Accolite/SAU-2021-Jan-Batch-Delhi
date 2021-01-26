@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://assignment.harshit.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://assignment.harshit.com" xmlns:intf="http://assignment.harshit.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://assignment.harshit.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="log2">
+    <complexType>
+     <sequence>
+      <element name="value" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="log2Response">
+    <complexType>
+     <sequence>
+      <element name="log2Return" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="logBase">
+    <complexType>
+     <sequence>
+      <element name="value" type="xsd:double"/>
+      <element name="base" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="logBaseResponse">
+    <complexType>
+     <sequence>
+      <element name="logBaseReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="factorial">
+    <complexType>
+     <sequence>
+      <element name="number" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="factorialResponse">
+    <complexType>
+     <sequence>
+      <element name="factorialReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="cosOf">
+    <complexType>
+     <sequence>
+      <element name="value" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="cosOfResponse">
+    <complexType>
+     <sequence>
+      <element name="cosOfReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="sinOf">
+    <complexType>
+     <sequence>
+      <element name="value" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="sinOfResponse">
+    <complexType>
+     <sequence>
+      <element name="sinOfReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="tanOf">
+    <complexType>
+     <sequence>
+      <element name="value" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="tanOfResponse">
+    <complexType>
+     <sequence>
+      <element name="tanOfReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="logBaseRequest">
+
+      <wsdl:part element="impl:logBase" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="tanOfResponse">
+
+      <wsdl:part element="impl:tanOfResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="log2Response">
+
+      <wsdl:part element="impl:log2Response" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="log2Request">
+
+      <wsdl:part element="impl:log2" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="factorialResponse">
+
+      <wsdl:part element="impl:factorialResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="factorialRequest">
+
+      <wsdl:part element="impl:factorial" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="sinOfResponse">
+
+      <wsdl:part element="impl:sinOfResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="logBaseResponse">
+
+      <wsdl:part element="impl:logBaseResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="cosOfResponse">
+
+      <wsdl:part element="impl:cosOfResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="cosOfRequest">
+
+      <wsdl:part element="impl:cosOf" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="sinOfRequest">
+
+      <wsdl:part element="impl:sinOf" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="tanOfRequest">
+
+      <wsdl:part element="impl:tanOf" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="Calculator">
+
+      <wsdl:operation name="log2">
+
+         <wsdl:input message="impl:log2Request" name="log2Request">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:log2Response" name="log2Response">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="logBase">
+
+         <wsdl:input message="impl:logBaseRequest" name="logBaseRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:logBaseResponse" name="logBaseResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="factorial">
+
+         <wsdl:input message="impl:factorialRequest" name="factorialRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:factorialResponse" name="factorialResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="cosOf">
+
+         <wsdl:input message="impl:cosOfRequest" name="cosOfRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:cosOfResponse" name="cosOfResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="sinOf">
+
+         <wsdl:input message="impl:sinOfRequest" name="sinOfRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:sinOfResponse" name="sinOfResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="tanOf">
+
+         <wsdl:input message="impl:tanOfRequest" name="tanOfRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:tanOfResponse" name="tanOfResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="CalculatorSoapBinding" type="impl:Calculator">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="log2">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="log2Request">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="log2Response">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="logBase">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="logBaseRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="logBaseResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="factorial">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="factorialRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="factorialResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="cosOf">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="cosOfRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="cosOfResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="sinOf">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="sinOfRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="sinOfResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="tanOf">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="tanOfRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="tanOfResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="CalculatorService">
+
+      <wsdl:port binding="impl:CalculatorSoapBinding" name="Calculator">
+
+         <wsdlsoap:address location="http://localhost:8080/SOAPAssignment/services/Calculator"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

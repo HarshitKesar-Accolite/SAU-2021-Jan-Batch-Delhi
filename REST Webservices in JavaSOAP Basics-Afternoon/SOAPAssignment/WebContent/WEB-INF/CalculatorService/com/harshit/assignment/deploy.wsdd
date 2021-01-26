@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from CalculatorService WSDL service -->
+
+  <service name="Calculator" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://assignment.harshit.com"/>
+      <parameter name="wsdlServiceElement" value="CalculatorService"/>
+      <parameter name="schemaQualified" value="http://assignment.harshit.com"/>
+      <parameter name="wsdlServicePort" value="Calculator"/>
+      <parameter name="className" value="com.harshit.assignment.Calculator"/>
+      <parameter name="wsdlPortType" value="Calculator"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://assignment.harshit.com" xmlns:retNS="http://assignment.harshit.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="log2" qname="operNS:log2" returnQName="retNS:log2Return" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://assignment.harshit.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:value" type="tns:double"/>
+      </operation>
+      <operation xmlns:operNS="http://assignment.harshit.com" xmlns:retNS="http://assignment.harshit.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="logBase" qname="operNS:logBase" returnQName="retNS:logBaseReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://assignment.harshit.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:value" type="tns:double"/>
+        <parameter xmlns:pns="http://assignment.harshit.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:base" type="tns:int"/>
+      </operation>
+      <operation xmlns:operNS="http://assignment.harshit.com" xmlns:retNS="http://assignment.harshit.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="factorial" qname="operNS:factorial" returnQName="retNS:factorialReturn" returnType="rtns:int" soapAction="">
+        <parameter xmlns:pns="http://assignment.harshit.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:number" type="tns:double"/>
+      </operation>
+      <operation xmlns:operNS="http://assignment.harshit.com" xmlns:retNS="http://assignment.harshit.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="cosOf" qname="operNS:cosOf" returnQName="retNS:cosOfReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://assignment.harshit.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:value" type="tns:double"/>
+      </operation>
+      <operation xmlns:operNS="http://assignment.harshit.com" xmlns:retNS="http://assignment.harshit.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="sinOf" qname="operNS:sinOf" returnQName="retNS:sinOfReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://assignment.harshit.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:value" type="tns:double"/>
+      </operation>
+      <operation xmlns:operNS="http://assignment.harshit.com" xmlns:retNS="http://assignment.harshit.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="tanOf" qname="operNS:tanOf" returnQName="retNS:tanOfReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://assignment.harshit.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:value" type="tns:double"/>
+      </operation>
+      <parameter name="allowedMethods" value="logBase factorial tanOf cosOf sinOf log2"/>
+
+  </service>
+</deployment>
