@@ -1,15 +1,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
  <modelVersion>4.0.0</modelVersion>
- <groupId>com.arpit.java2blog</groupId>
- <artifactId>JAXRSJsonExample</artifactId>
+ <groupId>org.harshit.bean</groupId>
+ <artifactId>Employee</artifactId>
  <packaging>war</packaging>
  <version>0.0.1-SNAPSHOT</version>
- <name>JAXRSJsonExample Maven Webapp</name>
+ <name>RestWebServiceAssignment</name>
  <url>http://maven.apache.org</url>
-   <properties>
-        <jersey.version>1.18.3</jersey.version>
-    </properties>
+ <properties>
+  <jersey.version>1.18.3</jersey.version>
+ </properties>
  <dependencies>
   <dependency>
    <groupId>junit</groupId>
@@ -17,7 +17,7 @@
    <version>3.8.1</version>
    <scope>test</scope>
   </dependency>
-  
+
   <dependency>
    <groupId>com.sun.jersey</groupId>
    <artifactId>jersey-servlet</artifactId>
@@ -28,7 +28,7 @@
    <artifactId>jersey-json</artifactId>
    <version>${jersey.version}</version>
   </dependency>
- 
+
   <dependency>
    <groupId>commons-logging</groupId>
    <artifactId>commons-logging</artifactId>
@@ -36,7 +36,7 @@
   </dependency>
  </dependencies>
  <build>
-  <finalName>JAXRSJsonExample</finalName>
+  <finalName>JAXRSJsonCRUDExample</finalName>
   <plugins>
    <plugin>
     <groupId>org.apache.maven.plugins</groupId>
